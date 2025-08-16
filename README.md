@@ -14,16 +14,6 @@ A modern, responsive e-commerce platform for sustainable beauty products built w
 
 *Modern, clean homepage showcasing sustainable beauty products with hero section, features, and product highlights.*
 
-### Product Showcase
-![Sustainable Beauty](./public/images/sustainable-beauty.jpg)
-
-*Beautiful product imagery highlighting our commitment to sustainable beauty practices.*
-
-### Natural Skincare
-![Natural Skincare Routine](./public/images/natural-skincare-routine.jpg)
-
-*Showcasing our natural skincare products and eco-friendly packaging solutions.*
-
 ## ✨ Features
 
 - 🛍️ **Modern E-commerce Experience** - Complete product catalog with search, filtering, and sorting
