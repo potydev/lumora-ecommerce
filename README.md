@@ -1,65 +1,40 @@
-# Lumora E-commerce Website
+# 🌿 Lumora - Sustainable Beauty E-commerce
 
-Modern e-commerce website untuk brand Lumora - pembersih wajah padat yang ramah lingkungan. Dibangun dengan Next.js 14, TypeScript, Tailwind CSS, dan Supabase.
+A modern, responsive e-commerce platform for sustainable beauty products built with Next.js 14, TypeScript, and Supabase.
 
-![Lumora Hero](./public/images/hero-image.jpg)
+![Lumora E-commerce](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Supabase](https://img.shields.io/badge/Supabase-Database-green?style=for-the-badge&logo=supabase)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-## 🌟 Features
+## ✨ Features
 
-### 🛍️ E-commerce Core
-- **Product Catalog** dengan filter, search, dan sorting
-- **Product Detail Pages** dengan galeri gambar dan variasi produk
-- **Shopping Cart** dengan drawer interface
-- **Checkout Process** dengan guest checkout support
-- **Order Management** untuk admin dan customer
+- 🛍️ **Modern E-commerce Experience** - Complete product catalog with search, filtering, and sorting
+- 🔐 **Authentication System** - Secure user registration and login with Supabase Auth
+- 🛒 **Shopping Cart** - Persistent cart with real-time updates
+- 💳 **Checkout Process** - Streamlined checkout with order management
+- 👤 **User Dashboard** - Account management and order history
+- 🎨 **Responsive Design** - Beautiful UI that works on all devices
+- 🌱 **Sustainability Focus** - Dedicated to eco-friendly beauty products
+- ⚡ **Performance Optimized** - Built with Next.js 14 for optimal speed
 
-### 🔐 Authentication & User Management
-- **Email/Password Authentication** dengan Supabase Auth
-- **Google OAuth Integration** untuk login cepat
-- **User Account Management** dengan profile editing
-- **Admin Dashboard** dengan role-based access
+## 🚀 Tech Stack
 
-### 🎨 Design & UX
-- **Responsive Design** untuk desktop, tablet, dan mobile
-- **Modern UI** dengan shadcn/ui components
-- **Smooth Animations** menggunakan GSAP
-- **Accessibility** compliant (WCAG AA)
-- **SEO Optimized** dengan proper meta tags
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** Supabase (PostgreSQL)
+- **Authentication:** Supabase Auth
+- **UI Components:** Shadcn/ui
+- **Icons:** Lucide React
+- **State Management:** Zustand
+- **Deployment:** Vercel (Ready)
 
-### 🌱 Sustainability Focus
-- **Zero Waste Messaging** yang konsisten
-- **Eco-friendly Branding** dengan color palette natural
-- **Educational Content** tentang sustainability
-- **Product Benefits** yang fokus pada lingkungan
+## 📦 Installation
 
-## 🛠️ Tech Stack
-
-### Frontend
-- **Next.js 14** - React framework dengan App Router
-- **TypeScript** - Type safety dan better developer experience
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - Modern component library
-- **GSAP** - Animation library
-- **Zustand** - State management untuk cart
-
-### Backend & Database
-- **Supabase** - Backend-as-a-Service
-- **PostgreSQL** - Database (via Supabase)
-- **Supabase Auth** - Authentication service
-- **Supabase Storage** - File storage untuk gambar produk
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm atau yarn
-- Supabase account (untuk production)
-
-### Installation
-
-1. **Clone repository**
+1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/potydev/lumora-ecommerce.git
    cd lumora-ecommerce
    ```
 
@@ -68,36 +43,27 @@ Modern e-commerce website untuk brand Lumora - pembersih wajah padat yang ramah 
    npm install
    ```
 
-3. **Setup environment variables**
+3. **Set up environment variables**
    ```bash
-   cp .env.local.example .env.local
+   cp .env.example .env.local
    ```
    
-   Edit `.env.local` dengan konfigurasi Supabase:
+   Add your Supabase credentials:
    ```env
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
    SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
    ```
 
-4. **Setup Supabase Database**
-   
-   Jalankan SQL schema di Supabase SQL Editor:
-   ```bash
-   # File: supabase-schema.sql
-   ```
-
-5. **Run development server**
+4. **Run the development server**
    ```bash
    npm run dev
    ```
 
-6. **Open browser**
-   ```
-   http://localhost:3000
-   ```
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 lumora-ecommerce/
@@ -106,103 +72,102 @@ lumora-ecommerce/
 │   │   ├── (auth)/            # Authentication pages
 │   │   ├── admin/             # Admin dashboard
 │   │   ├── products/          # Product pages
-│   │   ├── checkout/          # Checkout flow
-│   │   └── account/           # User account
+│   │   └── globals.css        # Global styles
 │   ├── components/            # Reusable components
+│   │   ├── ui/               # Shadcn/ui components
 │   │   ├── layout/           # Layout components
-│   │   ├── product/          # Product-related components
-│   │   ├── cart/             # Shopping cart components
-│   │   ├── auth/             # Authentication components
-│   │   └── sections/         # Landing page sections
-│   ├── lib/                  # Utility libraries
-│   │   ├── supabase/         # Supabase configuration
-│   │   ├── store/            # State management
-│   │   └── utils/            # Helper functions
+│   │   ├── sections/         # Page sections
+│   │   └── cart/             # Cart components
+│   ├── lib/                  # Utility functions
+│   │   ├── supabase/         # Supabase client
+│   │   └── store/            # Zustand stores
 │   └── types/                # TypeScript type definitions
 ├── public/                   # Static assets
 │   └── images/              # Product images
-├── supabase-schema.sql      # Database schema
-└── README.md               # Project documentation
+└── supabase-schema.sql      # Database schema
 ```
 
-## 🎨 Design System
+## 🎯 Key Features
 
-### Color Palette
-```css
-/* Primary Colors */
---sage: #84A98C;           /* Primary brand color */
---gold: #C5A880;           /* Secondary accent */
+### 🛍️ Product Management
+- Product catalog with categories
+- Advanced search and filtering
+- Product details with image gallery
+- Stock management
+- Rating and review system
 
-/* Neutral Colors */
---white: #FFFFFF;
---gray-50: #F9FAFB;
---gray-100: #F3F4F6;
---gray-900: #111827;
-```
+### 🔐 User Authentication
+- Email/password registration
+- Google OAuth integration
+- Password reset functionality
+- Protected routes
+- User profile management
 
-## 📱 Key Pages
+### 🛒 Shopping Experience
+- Add to cart functionality
+- Cart persistence
+- Quantity management
+- Checkout process
+- Order confirmation
 
-- **Homepage** (`/`) - Landing page dengan hero, features, products, testimonials
-- **Products** (`/products`) - Katalog produk dengan filter dan search
-- **Product Detail** (`/products/[id]`) - Detail produk dengan galeri dan reviews
-- **Cart** (drawer) - Shopping cart dengan checkout flow
-- **Checkout** (`/checkout`) - Proses checkout dengan form dan payment
-- **Login** (`/auth/login`) - Authentication dengan email/password dan OAuth
-- **Register** (`/auth/register`) - User registration
-- **Account** (`/account`) - User profile dan order history
-- **Admin Dashboard** (`/admin/dashboard`) - Admin overview dan statistics
-- **Admin Products** (`/admin/products`) - Product management interface
+### 👨‍💼 Admin Dashboard
+- Product management
+- Order tracking
+- User management
+- Analytics overview
+- Inventory control
 
-## 🔧 Configuration
+## 🌱 Sustainability Focus
 
-### Environment Variables
-```env
-# Supabase Configuration
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+Lumora is dedicated to promoting sustainable beauty practices:
 
-# Payment Gateway (Optional)
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key
-STRIPE_SECRET_KEY=your_stripe_secret
-```
+- **Zero Waste Packaging** - All products use biodegradable materials
+- **Natural Ingredients** - Sourced from certified organic suppliers
+- **Cruelty-Free** - No animal testing
+- **Eco-Friendly** - Reduced carbon footprint
+- **Community Impact** - Supporting local artisans
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
-1. Connect repository ke Vercel
-2. Set environment variables
-3. Deploy automatically
+
+1. **Connect your GitHub repository to Vercel**
+2. **Add environment variables in Vercel dashboard**
+3. **Deploy automatically on push to main branch**
 
 ### Manual Deployment
-```bash
-# Build production
-npm run build
 
-# Start production server
+```bash
+npm run build
 npm start
 ```
 
-## 📊 Testing Results
+## 🤝 Contributing
 
-✅ **Landing Page** - Hero, features, products, testimonials  
-✅ **Product Catalog** - Filter, search, pagination  
-✅ **Product Detail** - Gallery, variations, reviews  
-✅ **Shopping Cart** - Add/remove/update items  
-✅ **Checkout** - Form validation, payment integration  
-✅ **Authentication** - Login/register/account management  
-✅ **Admin Dashboard** - Product CRUD, order management  
-✅ **Responsive Design** - Mobile, tablet, desktop  
-✅ **Performance** - Optimized loading dan animations  
-✅ **Security** - Authentication dan data protection  
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📞 Support
+## 📝 License
 
-Untuk pertanyaan atau support:
-- Email: hello@lumora.id
-- Phone: +62 21 1234 5678
-- Address: Jakarta, Indonesia
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Supabase](https://supabase.com/) - Backend as a service
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Shadcn/ui](https://ui.shadcn.com/) - UI components
+- [Lucide](https://lucide.dev/) - Beautiful icons
+
+## 📞 Contact
+
+- **Website:** [lumora.com](https://lumora.com)
+- **Email:** hello@lumora.com
+- **Instagram:** [@lumora](https://instagram.com/lumora)
 
 ---
 
-**Made with ❤️ in Indonesia**
+Made with ❤️ for a more sustainable beauty industry
