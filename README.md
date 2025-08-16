@@ -10,7 +10,7 @@ A modern, responsive e-commerce platform for sustainable beauty products built w
 ## 📸 Screenshots
 
 ### Homepage
-![Lumora Homepage](./public/images/homepage.png)
+![Lumora Homepage](https://raw.githubusercontent.com/potydev/lumora-ecommerce/main/public/images/homepage.png)
 
 *Modern, clean homepage showcasing sustainable beauty products with hero section, features, and product highlights.*
 
