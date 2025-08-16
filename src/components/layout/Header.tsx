@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ShoppingBag, User, Menu, X, Search } from 'lucide-react'
+import { ShoppingBag, Menu, X, Search, User as UserIcon } from 'lucide-react'
+import { User } from '@supabase/supabase-js'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -14,7 +15,7 @@ import CartDrawer from '@/components/cart/CartDrawer'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<User | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
   const { items } = useCartStore()
@@ -116,7 +117,7 @@ export default function Header() {
               href={user ? '/account' : '/auth/login'}
               className="hidden sm:flex items-center space-x-1 text-gray-700 hover:text-sage transition-colors duration-200"
             >
-              <User className="w-5 h-5" />
+              <UserIcon className="w-5 h-5" />
               <span className="text-sm font-medium">
                 {user ? 'Account' : 'Login'}
               </span>
@@ -172,7 +173,7 @@ export default function Header() {
                       href={user ? '/account' : '/auth/login'}
                       className="flex items-center space-x-2 text-gray-700 hover:text-sage transition-colors duration-200"
                     >
-                      <User className="w-5 h-5" />
+                      <UserIcon className="w-5 h-5" />
                       <span className="font-medium">
                         {user ? 'My Account' : 'Login / Register'}
                       </span>

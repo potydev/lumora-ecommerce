@@ -107,7 +107,7 @@ export default function ProductsSection() {
     )
 
     // Animate product cards
-    gsap.utils.toArray('.product-card').forEach((card: any, index) => {
+    gsap.utils.toArray('.product-card').forEach((card: HTMLElement, index) => {
       gsap.fromTo(
         card,
         { opacity: 0, y: 50, scale: 0.9 },

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { 
@@ -102,7 +103,7 @@ export default function AboutPage() {
               <span className="text-sage">One Product at a Time</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              At Lumora, we believe beauty shouldn't cost the earth. Our mission is to create 
+              At Lumora, we believe beauty shouldn&apos;t cost the earth. Our mission is to create 
               effective, sustainable skincare products that nourish your skin while protecting 
               our planet for future generations.
             </p>
@@ -123,7 +124,7 @@ export default function AboutPage() {
                 Creating a More Beautiful World
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We're on a mission to transform the beauty industry by proving that sustainable 
+                We&apos;re on a mission to transform the beauty industry by proving that sustainable 
                 products can be just as effective, luxurious, and accessible as conventional ones. 
                 Every decision we make is guided by our commitment to environmental stewardship.
               </p>
@@ -156,7 +157,7 @@ export default function AboutPage() {
                     Environmental Impact
                   </h3>
                   <p className="text-gray-600">
-                    Since our launch, we've prevented over 10,000 plastic bottles 
+                    Since our launch, we&apos;ve prevented over 10,000 plastic bottles 
                     from entering landfills and oceans.
                   </p>
                 </div>
@@ -287,13 +288,13 @@ export default function AboutPage() {
             sustainable world. Start your journey with Lumora today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/products"
               className="inline-flex items-center justify-center px-8 py-3 bg-white text-sage font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200"
             >
               <Eye className="w-5 h-5 mr-2" />
               Explore Products
-            </a>
+            </Link>
             <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-sage transition-colors duration-200"

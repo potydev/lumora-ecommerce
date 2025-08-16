@@ -17,7 +17,7 @@ export default function FeaturesSection() {
     if (!sectionRef.current) return
 
     // Animate feature cards on scroll
-    gsap.utils.toArray('.feature-card').forEach((card: any, index) => {
+    gsap.utils.toArray('.feature-card').forEach((card: HTMLElement, index) => {
       gsap.fromTo(
         card,
         { opacity: 0, y: 50, scale: 0.9 },

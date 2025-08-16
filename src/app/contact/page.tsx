@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -67,12 +68,12 @@ export default function ContactPage() {
               Get in Touch
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Let's Start a{' '}
+              Let&apos;s Start a{' '}
               <span className="text-sage">Conversation</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Have questions about our products? Want to learn more about sustainable beauty? 
-              Or just want to say hello? We'd love to hear from you!
+              Or just want to say hello? We&apos;d love to hear from you!
             </p>
           </div>
         </div>
@@ -88,7 +89,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
                   <p className="text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&apos;ll get back to you as soon as possible.
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -209,7 +210,7 @@ export default function ContactPage() {
               <CardContent>
                 <p className="text-gray-600">
                   Yes! All our products use biodegradable packaging and zero plastic. 
-                  We're committed to 100% sustainable materials.
+                  We&apos;re committed to 100% sustainable materials.
                 </p>
               </CardContent>
             </Card>
@@ -217,13 +218,13 @@ export default function ContactPage() {
             <Card className="border-0 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-lg text-gray-900">
-                  Can I return products if they don't work for me?
+                  Can I return products if they don&apos;t work for me?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
                   Absolutely! We offer a 30-day satisfaction guarantee. 
-                  If a product doesn't work for your skin, we'll help you find the right solution.
+                  If a product doesn&apos;t work for your skin, we&apos;ll help you find the right solution.
                 </p>
               </CardContent>
             </Card>
@@ -252,16 +253,16 @@ export default function ContactPage() {
             Ready to Start Your Sustainable Beauty Journey?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of conscious consumers who've already made the switch 
+            Join thousands of conscious consumers who&apos;ve already made the switch 
             to sustainable, effective skincare.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/products"
               className="inline-flex items-center justify-center px-8 py-3 bg-white text-sage font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200"
             >
               Shop Now
-            </a>
+            </Link>
             <a
               href="/about"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-sage transition-colors duration-200"

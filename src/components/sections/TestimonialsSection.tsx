@@ -190,7 +190,7 @@ export default function TestimonialsSection() {
               {/* Testimonial Content */}
               <div className="lg:col-span-2">
                 <blockquote className="text-lg lg:text-xl text-gray-700 leading-relaxed italic">
-                  "{testimonials[currentIndex].comment}"
+                  &quot;{testimonials[currentIndex].comment}&quot;
                 </blockquote>
               </div>
             </div>

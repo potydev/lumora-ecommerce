@@ -119,7 +119,7 @@ export default function ProductsPage() {
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
-    let filtered = products.filter(product => {
+    const filtered = products.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            product.description.toLowerCase().includes(searchQuery.toLowerCase())
       
@@ -343,7 +343,7 @@ export default function ProductsPage() {
             )}
             {searchQuery && (
               <Badge variant="secondary" className="bg-sage/10 text-sage">
-                Search: "{searchQuery}"
+                Search: &quot;{searchQuery}&quot;
                 <button
                   onClick={() => setSearchQuery('')}
                   className="ml-2 hover:text-sage/70"

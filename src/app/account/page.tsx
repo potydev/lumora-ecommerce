@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { User, Package, Heart, Settings, LogOut, Edit, Save, X } from 'lucide-react'
+import Link from 'next/link'
+import { Package, Heart, Settings, LogOut, Edit, Save, X } from 'lucide-react'
+import { User } from '@supabase/supabase-js'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -21,7 +23,7 @@ interface UserProfile {
 }
 
 export default function AccountPage() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<User | null>(null)
   const [profile, setProfile] = useState<UserProfile | null>(null)
   const [isEditing, setIsEditing] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
@@ -286,10 +288,10 @@ export default function AccountPage() {
                 <Package className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900 mb-2">No orders yet</h3>
                 <p className="text-gray-600 mb-6">
-                  You haven't placed any orders yet. Start shopping to see your orders here.
+                  You haven&apos;t placed any orders yet. Start shopping to see your orders here.
                 </p>
                 <Button className="bg-sage hover:bg-sage/90">
-                  <a href="/products">Start Shopping</a>
+                  <Link href="/products">Start Shopping</Link>
                 </Button>
               </div>
             </div>
